@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <div class="section4">
-      <div v-for="n in 3" :key="n">
-          <div class="columns" >
-              <div class="subtitle"></div>
-              <div class="subpara"></div>
-          </div>
+  <div class="section4">
+    <div class="container">
+      <div class="grid">
+        <div v-for="n in 3" :key="n" class="columns">
+          <div class="subtitle"></div>
+          <div class="subpara"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -17,19 +17,25 @@ export default {
 </script>
 <style lang="scss">
 .section4 {
-    height: 300px;
     background-color: palevioletred;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+
+    .grid{
+      height: 300px;
+      margin: 0 -10px;
+      display: flex;
+      align-items: center;
+      flex: 1 1 33.33%;
+    }
+
     .columns {
-        height: 200px;
-        width: 150px;
+        width: 100%;
         background-color: white;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
+        margin: 0 10px;
+
         .subtitle {
             height: 30px;
             width: 120px;

@@ -35,3 +35,10 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .container{
+    width: 900px;
+    margin: 0 auto;
+  }
+</style>
